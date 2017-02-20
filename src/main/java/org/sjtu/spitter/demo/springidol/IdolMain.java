@@ -12,5 +12,11 @@ public class IdolMain {
                 new ClassPathXmlApplicationContext("idols.xml");
         Performer performer = (Performer) context.getBean("duke");
         performer.perform();
+        performer = (Performer) context.getBean("poeticDuke");
+        performer.perform();
+        performer = (Performer) context.getBean("kenny");
+        performer.perform();
+        performer = (Performer) context.getBean("chuck");
+        performer.perform();
     }
 }

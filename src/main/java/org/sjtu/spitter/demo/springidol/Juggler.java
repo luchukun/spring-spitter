@@ -16,6 +16,6 @@ public class Juggler implements Performer {
 
     @Override
     public void perform() {
-        System.out.println("Juggler " + beanBags + " Bean Bags");
+        System.out.println("Juggler " + beanBags + " Bean Bags\n");
     }
 }

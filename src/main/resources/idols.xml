@@ -5,4 +5,42 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="duke" class="org.sjtu.spitter.demo.springidol.Juggler"/>
+
+    <bean id="poeticDuke" class="org.sjtu.spitter.demo.springidol.PoeticJuggler">
+        <constructor-arg value="#{T(java.lang.Math).random()*20}"/>
+        <constructor-arg ref="poemImp"/>
+    </bean>
+
+    <bean id="poemImp" class="org.sjtu.spitter.demo.springidol.PoemImp">
+
+    </bean>
+
+    <bean id="saxophone" class="org.sjtu.spitter.demo.springidol.Saxophone"/>
+
+    <bean id="kenny" class="org.sjtu.spitter.demo.springidol.Instrumentalist">
+        <property name="song" value="One tiger, two tigers..."/>
+        <property name="instrument">
+            <bean class="org.sjtu.spitter.demo.springidol.Saxophone"/>
+        </property>
+    </bean>
+    
+    <bean id="chuck" class="org.sjtu.spitter.demo.springidol.Instrumentalist">
+        <property name="song" value="#{kenny.song}"/>
+        <property name="instrument">
+            <bean class="org.sjtu.spitter.demo.springidol.Saxophone"/>
+        </property>
+    </bean>
+
+    <bean id="theStage" class="org.sjtu.spitter.demo.springidol.Stage"
+          factory-method="getInstance">
+        <property name="performers">
+            <list>
+                <ref bean="duke"/>
+                <ref bean="poeticDuke"/>
+                <ref bean="kenny"/>
+                <ref bean="chuck"/>
+            </list>
+        </property>
+    </bean>
+
 </beans>
