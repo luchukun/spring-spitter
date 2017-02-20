@@ -1,4 +1,4 @@
-package org.sjtu.spitter.demo;
+package org.sjtu.spitter.demo.knights;
 /**
  * Created by luchukun on 17-2-20.
  */

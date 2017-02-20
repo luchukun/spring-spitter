@@ -1,6 +1,5 @@
-package org.sjtu.spitter.demo;
+package org.sjtu.spitter.demo.knights;
 
-import org.sjtu.spitter.demo.Knight;
 
 /**
  * Created by luchukun on 17-2-20.

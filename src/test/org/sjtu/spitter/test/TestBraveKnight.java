@@ -4,10 +4,11 @@
 package org.sjtu.spitter.test;
 
 import org.junit.Test;
+import org.sjtu.spitter.demo.knights.BraveKnight;
+import org.sjtu.spitter.demo.knights.Quest;
+
 import static org.mockito.Mockito.*;
 
-import org.sjtu.spitter.demo.BraveKnight;
-import org.sjtu.spitter.demo.Quest;
 
 public class TestBraveKnight {
     @Test
