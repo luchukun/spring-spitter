@@ -1,4 +1,4 @@
-package org.sjtu.spitter.Demo;
+package org.sjtu.spitter.demo;
 
 /**
  * Created by luchukun on 17-2-20.
