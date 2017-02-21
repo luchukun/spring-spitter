@@ -1,11 +1,15 @@
 package org.sjtu.spitter.demo.springidol;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by luchukun on 17-2-20.
  */
 public class Instrumentalist implements Performer {
+    @Autowired
     private Instrument instrument;
+
 
     private String song;
 
