@@ -31,4 +31,10 @@ public class Stage {
         return performers;
     }
 
+    public void beginPerform() {
+        for(Performer p : performers) {
+            p.perform();
+        }
+    }
+
 }

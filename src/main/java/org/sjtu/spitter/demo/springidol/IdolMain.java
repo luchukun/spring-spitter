@@ -10,13 +10,7 @@ public class IdolMain {
     public static void main(String[] args) {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("idols.xml");
-        Performer performer = (Performer) context.getBean("duke");
-        performer.perform();
-        performer = (Performer) context.getBean("poeticDuke");
-        performer.perform();
-        performer = (Performer) context.getBean("kenny");
-        performer.perform();
-        performer = (Performer) context.getBean("chuck");
-        performer.perform();
+        Stage theStage = (Stage) context.getBean("theStage");
+        theStage.beginPerform();
     }
 }
